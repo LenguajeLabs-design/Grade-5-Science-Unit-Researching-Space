@@ -1,0 +1,48 @@
+name: Publish Space Explorer
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Assemble the five topic folders
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          paths = [".nojekyll","README.md","constellations/SOURCES-AND-IMAGE-CREDITS.md","constellations/TEST-REPORT.md","constellations/app.js","constellations/assets/earth-motion.svg","constellations/assets/favicon.svg","constellations/assets/images/orion.jpg","constellations/assets/images/polaris-nasa.jpg","constellations/assets/images/star-trails.jpg","constellations/assets/manifest.json","constellations/assets/orion-coordinates.json","constellations/assets/orion-overlay.svg","constellations/assets/perspective.svg","constellations/assets/polaris-coordinates.json","constellations/assets/polaris.svg","constellations/constellations-reader.pdf","constellations/credits.html","constellations/index.html","constellations/styles.css","constellations/translation-data.json","constellations/translations.js","hub.css","index.html","iss/SOURCES-AND-IMAGE-CREDITS.md","iss/TEST-REPORT.md","iss/app.js","iss/assets/astronaut.svg","iss/assets/experiment.svg","iss/assets/images/cupola.jpg","iss/assets/images/floating.jpg","iss/assets/images/manifest.json","iss/assets/images/station.jpg","iss/assets/images/veggie.jpg","iss/assets/microgravity.svg","iss/assets/orbit.svg","iss/assets/station.svg","iss/assets/word-orbit.svg","iss/credits.html","iss/index.html","iss/iss-reader.pdf","iss/styles.css","iss/translation-data.json","mars/SOURCES-AND-IMAGE-CREDITS.md","mars/TEST-REPORT.md","mars/assets/images/mars-delta.jpg","mars/assets/images/mars-landscape.jpg","mars/assets/images/perseverance-selfie.jpg","mars/index.html","mars/mars-reader.pdf","moon/SOURCES-AND-IMAGE-CREDITS.md","moon/TEST-REPORT.md","moon/app.js","moon/assets/images/manifest.json","moon/assets/images/moon-apollo.jpg","moon/assets/images/moon-nearside.jpg","moon/assets/images/moon-phases.jpg","moon/assets/images/moon-tycho.jpg","moon/assets/moon-phases.svg","moon/index.html","moon/moon-reader.pdf","moon/styles.css","moon/translation-data.json","reader-navigation.css","sun/SOURCES-AND-IMAGE-CREDITS.md","sun/TEST-REPORT.md","sun/app.js","sun/assets/energy-mobile.svg","sun/assets/energy.svg","sun/assets/images/aurora.jpg","sun/assets/images/flare.jpg","sun/assets/images/parker.png","sun/assets/images/sun.jpg","sun/assets/images/sunspots.jpg","sun/assets/interior-mobile.svg","sun/assets/interior.svg","sun/assets/size-mobile.svg","sun/assets/size.svg","sun/assets/sun-icon.svg","sun/assets/word-evidence.svg","sun/assets/word-flare.svg","sun/assets/word-fusion.svg","sun/assets/word-gravity.svg","sun/assets/word-star.svg","sun/credits.html","sun/index.html","sun/styles.css","sun/sun-reader.pdf","sun/translation-data.json"]
+          for i, name in enumerate(paths):
+              source = Path(f"file-{i:03}")
+              if not source.exists(): source = Path(name)
+              target = Path("_site") / name
+              assert source.is_file(), source
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source, target)
+          PY
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
