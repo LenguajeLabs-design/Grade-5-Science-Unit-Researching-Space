@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Five illustrated Grade 5 space readers. Explore Mars, the Moon, the International Space Station, the Sun, and constellations with language and listening tools.">
+  <meta name="theme-color" content="#101d39">
+  <title>Space Explorer · Grade 5 Reading Hub</title>
+  <link rel="icon" href="constellations/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+<a class="skip" href="#topics">Skip to the space readers</a>
+<header class="masthead"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">✦</span><span>SPACE EXPLORER<small>THE GRADE 5 SCIENCE READING HUB</small></span></a><a class="header-link" href="#topics">Choose a topic <span aria-hidden="true">↓</span></a></header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-copy"><p class="eyebrow">BIG QUESTIONS. EXTRAORDINARY PLACES.</p><h1 id="hero-title">Your next<br>space discovery<br><em>starts here.</em></h1><p class="intro">From our nearest neighbour to the patterns of the night sky. Read, look closer, and think like a scientist.</p><a class="primary" href="#topics">Explore the five readers <span aria-hidden="true">↓</span></a><p class="hero-note">GRADE 5 <span>·</span> REAL SPACE PHOTOGRAPHS <span>·</span> READ YOUR WAY</p></div>
+  <figure class="hero-art"><div class="orbit" aria-hidden="true"></div><img src="moon/assets/images/moon-nearside.jpg" alt="The near side of Earth's Moon, showing dark plains and bright craters."><figcaption><span>01 / OUR NEAREST NEIGHBOUR</span><span>The Moon · NASA / GSFC / Arizona State University</span></figcaption></figure>
+</section>
+<section class="support-strip" aria-label="Reading support"><div><span class="support-symbol" aria-hidden="true">Aa</span><p><strong>Read your way</strong><span>English + Chinese, Korean, Japanese &amp; German support</span></p></div><div><span class="support-symbol" aria-hidden="true">◖))</span><p><strong>Listen as you read</strong><span>Read-aloud tools in every reader; voices vary by device</span></p></div><div><span class="support-symbol" aria-hidden="true">↓</span><p><strong>Take a copy with you</strong><span>An illustrated PDF for every topic</span></p></div></section>
+<section class="topics" id="topics" aria-labelledby="topics-title"><div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR NEXT QUESTION</p><h2 id="topics-title">Five ways to explore space.</h2></div><p>Start anywhere. Each reader has photographs, science vocabulary, and questions to investigate.</p></div><div class="topic-grid"><article class="topic-card">
+      <a class="topic-image" href="mars/" tabindex="-1" aria-hidden="true"><img src="mars/assets/images/mars-landscape.jpg" alt="" loading="lazy"></a>
+      <div class="topic-copy"><p class="topic-number">READER 01 <span>The red planet</span></p><h3><a href="mars/">Mars<span aria-hidden="true"> ↗</span></a></h3><p>Investigate rusty rocks, ancient water, and robot explorers.</p>
+      <div class="topic-actions"><a class="read-link" href="mars/">Read about Mars <span aria-hidden="true">→</span></a><a class="pdf-link" href="mars/mars-reader.pdf">PDF<span class="sr-only">: Mars</span></a></div></div>
+    </article>
+<article class="topic-card">
+      <a class="topic-image" href="moon/" tabindex="-1" aria-hidden="true"><img src="moon/assets/images/moon-nearside.jpg" alt="" loading="lazy"></a>
+      <div class="topic-copy"><p class="topic-number">READER 02 <span>Our nearest neighbour</span></p><h3><a href="moon/">Earth’s Moon<span aria-hidden="true"> ↗</span></a></h3><p>Explore craters, changing phases, and journeys to the Moon.</p>
+      <div class="topic-actions"><a class="read-link" href="moon/">Read about Earth’s Moon <span aria-hidden="true">→</span></a><a class="pdf-link" href="moon/moon-reader.pdf">PDF<span class="sr-only">: Earth’s Moon</span></a></div></div>
+    </article>
+<article class="topic-card">
+      <a class="topic-image" href="iss/" tabindex="-1" aria-hidden="true"><img src="iss/assets/images/station.jpg" alt="" loading="lazy"></a>
+      <div class="topic-copy"><p class="topic-number">READER 03 <span>A home above Earth</span></p><h3><a href="iss/">International Space Station<span aria-hidden="true"> ↗</span></a></h3><p>Find out how astronauts live, work, and investigate in space.</p>
+      <div class="topic-actions"><a class="read-link" href="iss/">Read about International Space Station <span aria-hidden="true">→</span></a><a class="pdf-link" href="iss/iss-reader.pdf">PDF<span class="sr-only">: International Space Station</span></a></div></div>
+    </article>
+<article class="topic-card">
+      <a class="topic-image" href="sun/" tabindex="-1" aria-hidden="true"><img src="sun/assets/images/sun.jpg" alt="" loading="lazy"></a>
+      <div class="topic-copy"><p class="topic-number">READER 04 <span>Our closest star</span></p><h3><a href="sun/">The Sun<span aria-hidden="true"> ↗</span></a></h3><p>Follow the energy from our star and explore a changing Sun.</p>
+      <div class="topic-actions"><a class="read-link" href="sun/">Read about The Sun <span aria-hidden="true">→</span></a><a class="pdf-link" href="sun/sun-reader.pdf">PDF<span class="sr-only">: The Sun</span></a></div></div>
+    </article>
+<article class="topic-card">
+      <a class="topic-image" href="constellations/" tabindex="-1" aria-hidden="true"><img src="constellations/assets/images/orion.jpg" alt="" loading="lazy"></a>
+      <div class="topic-copy"><p class="topic-number">READER 05 <span>Patterns in the night sky</span></p><h3><a href="constellations/">Constellations<span aria-hidden="true"> ↗</span></a></h3><p>Look closer at star patterns, perspective, and finding north.</p>
+      <div class="topic-actions"><a class="read-link" href="constellations/">Read about Constellations <span aria-hidden="true">→</span></a><a class="pdf-link" href="constellations/constellations-reader.pdf">PDF<span class="sr-only">: Constellations</span></a></div></div>
+    </article></div></section>
+<section class="mission" aria-labelledby="mission-title"><p class="eyebrow">THINK LIKE A SCIENTIST</p><h2 id="mission-title">Look. Wonder. Find evidence.</h2><div class="mission-steps"><p><span>01</span><strong>Look closely</strong>What can you notice in the photographs and diagrams?</p><p><span>02</span><strong>Ask a question</strong>What do you wonder about this place in space?</p><p><span>03</span><strong>Support your thinking</strong>Which details in the reader help explain your idea?</p></div></section>
+</main>
+<footer><a class="footer-brand" href="./">✦ SPACE EXPLORER</a><p>Grade 5 Science · Researching Space</p><p>Photograph credits and source links are included in each reader.</p></footer>
+</body></html>

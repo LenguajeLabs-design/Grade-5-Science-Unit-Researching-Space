@@ -1,0 +1,24 @@
+# Test report — 30 October 2026
+
+## Verified
+
+- **Web layouts and assets:** Chrome automation at 390 × 844, 768 × 1024, 1024 × 768 and 1440 × 900 CSS pixels loaded all 13 article images/diagrams, with alt attributes. No document-level horizontal overflow or JavaScript errors appeared. The Sun interior diagram is shown at the start of section 02. On narrow screens it can be scrolled sideways or opened at full size; the other two diagrams use portrait layouts. Layouts were inspected from browser screenshots; these are emulated viewports, not physical devices.
+- **Navigation and language:** All four section anchors selected the matching section. Four home-language selectors each produced four summaries and revealed/hid all 12 matching reading-paragraph translations while keeping English visible (48 translated paragraphs and 16 summaries). Changes to the selected section update its summary.
+- **Listening:** Automated speech-engine simulation exercised Read, Pause, Resume, Stop, section naming and home-language summary selection. In headless Chrome, the native speech API listed device voices and reported “Reading section 1”; audio was not independently heard. Actual audible playback, pronunciation, voice availability and pause behavior should be checked on the target classroom devices.
+- **Keyboard and links:** The skip link and translation button responded to keyboard activation. The browser's native language select keyboard behavior was not verified in the headless Mac test. The print link returned HTTP 200 with PDF content type. Static checks found no missing local references or duplicate IDs in the reader and credit page.
+- **PDF:** Five A4 pages with selectable text, embedded imagery and six source link annotations. Text character bounds stayed within the pages; all pages were rendered to PNG and visually reviewed. The four narrative pages use 14-point body text; the separate fifth page gives the glossary, questions and frames room to remain readable. The PDF is not a tagged accessible PDF.
+- **Images and science:** Local JPEG/PNG files passed image integrity checks. NASA source pages and credits are listed in `SOURCES-AND-IMAGE-CREDITS.md`. The interior diagram identifies the core, radiative zone, convection zone and visible surface, and says the outward energy journey takes a very long time. The size comparison uses a 109:1 diameter scale and labels the enlarged Earth inset and unscaled separation; the interior and energy pathway are labeled schematic.
+
+## Review still needed
+
+- Chinese, Korean, Japanese and German translations and summaries have not been independently checked by native speakers or a teacher. They are labeled as requiring teacher verification in the reader.
+- Confirm audio on the actual classroom browser and devices. Voice selection and sound are device-dependent; speech cannot be guaranteed when a suitable voice is missing.
+- The site has not been deployed to Netlify, so the final hosted URL and Padlet link have not yet been tested.
+
+## Copy and layout decisions
+
+The supplied manuscript was preserved with paragraphs grouped for the web reader. “Tiny particles of hydrogen” was changed to “tiny hydrogen nuclei” to identify what joins in fusion. The final sentence was placed before the safety callout to keep the main narrative together. The print edition uses a fifth page for the practice material rather than making the fourth page's text too small.
+
+## Diagram revision
+
+The size, interior and energy diagrams were redesigned with a shared visual style and legible labels; the five glossary pictograms were revised to match. All five PDF pages were re-rendered and inspected. Browser checks were repeated after the revision.

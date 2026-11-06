@@ -1,0 +1,70 @@
+[
+  {
+    "file": "station",
+    "id": "iss056e201302",
+    "date": "2018-10-04",
+    "credit": "NASA/Roscosmos",
+    "caption": "The ISS above Earth, photographed from a departing Soyuz spacecraft by Expedition 56 crew members on October 4, 2018.",
+    "alt": "The International Space Station with its long solar arrays above the blue, curved edge of Earth.",
+    "source": "https://www.nasa.gov/image-article/international-space-station-as-of-oct-4-2018-5/",
+    "download": "https://www.nasa.gov/wp-content/uploads/2023/03/iss056e201302.jpg",
+    "verified": "2026-10-30",
+    "transform": "NASA-distributed JPEG retained unchanged; CSS may crop the display.",
+    "dimensions": [
+      1041,
+      694
+    ],
+    "sha256": "cc721508a38e31ca42bcac2004b3ca3712d7d10049cafae38d2a875583668436"
+  },
+  {
+    "file": "floating",
+    "id": "iss062e004933",
+    "date": "2020-02-09",
+    "credit": "NASA",
+    "caption": "Jessica Meir observes a floating sphere of water inside the ISS Kibo laboratory, February 9, 2020.",
+    "alt": "Astronaut Jessica Meir floats inside the Kibo laboratory with her hair raised and a round water sphere in front of her face.",
+    "source": "https://www.nasa.gov/image-article/flight-engineer-jessica-meir-observes-floating-sphere-of-water/",
+    "download": "https://www.nasa.gov/wp-content/uploads/2023/03/iss062e004933.jpg",
+    "verified": "2026-10-30",
+    "transform": "NASA-distributed JPEG retained unchanged; CSS may crop the display.",
+    "dimensions": [
+      1041,
+      694
+    ],
+    "sha256": "3c4f5aab954d9bf79dd2b421d8e42eff6833d29bca55ac92881bb68a1acbfa74"
+  },
+  {
+    "file": "veggie",
+    "id": "iss064e047074",
+    "date": "2021-03-26",
+    "credit": "NASA",
+    "caption": "JAXA astronaut Soichi Noguchi displays Extra Dwarf Pak Choi plants grown for the Veggie study aboard the ISS, March 26, 2021.",
+    "alt": "Astronaut Soichi Noguchi holds a tray of leafy pak choi plants grown aboard the International Space Station for the Veggie investigation.",
+    "source": "https://www.nasa.gov/image-article/jaxa-astronaut-soichi-noguchi-works-veggie-experiment/",
+    "download": "https://www.nasa.gov/wp-content/uploads/2023/03/iss064e047074.jpg",
+    "verified": "2026-10-30",
+    "transform": "NASA-distributed JPEG retained unchanged; CSS may crop the display.",
+    "dimensions": [
+      1041,
+      694
+    ],
+    "sha256": "e152f2f516fe5a7e40979072df3fd34c0a7c13e6e095dd3454b2d0f35ef4d4b1"
+  },
+  {
+    "file": "cupola",
+    "id": "iss067e033745",
+    "date": "2022-05",
+    "credit": "NASA",
+    "caption": "NASA astronaut Jessica Watkins looks toward Earth through the ISS Cupola windows, May 2022.",
+    "alt": "Jessica Watkins floats in the Cupola, looking through its large windows at the bright blue and white Earth below.",
+    "source": "https://www.nasa.gov/image-article/astronaut-jessica-watkins-enjoys-view-of-earth-below/",
+    "download": "https://www.nasa.gov/wp-content/uploads/2023/03/iss067e033745.jpg",
+    "verified": "2026-10-30",
+    "transform": "NASA-distributed JPEG retained unchanged; CSS may crop the display.",
+    "dimensions": [
+      1041,
+      1562
+    ],
+    "sha256": "54ff2b356c75d6c2776efd01f36f12dcd5c7b0d691ecef65b3f28220714443ba"
+  }
+]

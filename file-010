@@ -1,0 +1,64 @@
+[
+  {
+    "path": "assets/earth-motion.svg",
+    "bytes": 2329,
+    "sha256": "b2e4a319d5b9f195167ba769b2bc6376dbf9c7a6b6ac73ec96a19edbae103562"
+  },
+  {
+    "path": "assets/favicon.svg",
+    "bytes": 344,
+    "sha256": "a7591e8345a2b0472830a6478bd3df9af511ee0fd990a8447241d70f4d31f308"
+  },
+  {
+    "path": "assets/images/orion.jpg",
+    "bytes": 1545825,
+    "sha256": "f18d39ca981d434a45998c087196e2da31939e8315317b185bc8b0b7f1b8530a",
+    "pixels": [
+      1598,
+      2000
+    ]
+  },
+  {
+    "path": "assets/images/polaris-nasa.jpg",
+    "bytes": 68545,
+    "sha256": "b6bf9120da82525148a3bf9041c2879b374b2f5a7b6cea45c6c7af267e2f7a02",
+    "pixels": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "path": "assets/images/star-trails.jpg",
+    "bytes": 852838,
+    "sha256": "696378f3d63240701e6ca27b072c7a06e2b23a629967376cfc9b90f605de7d65",
+    "pixels": [
+      1200,
+      1800
+    ]
+  },
+  {
+    "path": "assets/orion-coordinates.json",
+    "bytes": 570,
+    "sha256": "3261267d304ec1fc7a0fcca6fe2f719f1b538502d21b601e4d7db6dd94fa8be7"
+  },
+  {
+    "path": "assets/orion-overlay.svg",
+    "bytes": 1018,
+    "sha256": "6dcc0c85503f0a4212c13b065010a1b177379ddbbfeccb04af5e4ab425e74158"
+  },
+  {
+    "path": "assets/perspective.svg",
+    "bytes": 1583,
+    "sha256": "c8100fba03b6380b4fde131109e10c5bd318e7855f1c1bb0aa24147c4fd429bb"
+  },
+  {
+    "path": "assets/polaris-coordinates.json",
+    "bytes": 616,
+    "sha256": "4cf78e17db3b178f62d989935029bb32610777e0ac722fffefce9a6d1a7874ea"
+  },
+  {
+    "path": "assets/polaris.svg",
+    "bytes": 1964,
+    "sha256": "86dc37602a7cd1b242c1e2c2086abfba56d1dc8f41ec7095d70324a9df47a70c"
+  }
+]

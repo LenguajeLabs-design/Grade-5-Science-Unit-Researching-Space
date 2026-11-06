@@ -1,0 +1,36 @@
+{
+  "image": "images/orion.jpg",
+  "width": 1598,
+  "height": 2000,
+  "method": "Visually identified against Orion star charts, then brightness-weighted centroid in a 33-pixel window at full resolution.",
+  "stars": {
+    "Betelgeuse": [
+      570.5,
+      512.7
+    ],
+    "Bellatrix": [
+      967.1,
+      609.7
+    ],
+    "Mintaka": [
+      840.9,
+      953.8
+    ],
+    "Alnilam": [
+      779.7,
+      996.5
+    ],
+    "Alnitak": [
+      715.3,
+      1029.4
+    ],
+    "Saiph": [
+      581.6,
+      1432.1
+    ],
+    "Rigel": [
+      1033.0,
+      1397.3
+    ]
+  }
+}

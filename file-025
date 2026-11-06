@@ -1,0 +1,34 @@
+# ISS reader test report
+
+Review build checked October 30, 2026. Tests used the local HTTP preview and the final four-page PDF. The existing local Mars and Moon projects were inspected as the series reference.
+
+## Completed checks
+
+- **Content and science:** checked the supplied manuscript against NASA sources for approximate altitude, orbital period/speed, daily sunrises, free fall, exercise, research, agency cooperation, and continuous occupation. The article and diagram preserve the explanation that Earth still pulls on the ISS and everything inside falls together.
+- **Photographs:** all four NASA records and their distributed image URLs were checked. Local JPEGs decode successfully and visually match the ISS above Earth, Jessica Meir in microgravity, an actual ISS Veggie investigation with Soichi Noguchi, and Jessica Watkins in the Cupola. Captions credit NASA/Roscosmos or NASA as appropriate. Image IDs, dimensions, download URLs, and SHA-256 hashes are recorded in the manifest.
+- **Translations:** all 12 paragraph controls were opened and closed in each of Simplified Chinese, Korean, Japanese, and German: **48/48 passed**. English remained visible. Language changes reset open translation blocks. Embedded app data matches the editable language-review JSON. Content was checked for terminology, numerical values, and preservation of the orbit/free-fall cause and effect.
+- **Section summaries:** **16/16** home-language summaries were present and followed the selected section. The selected summary is displayed with the language/listening controls.
+- **Read-aloud:** the actual macOS browser/device speech engine emitted the start state for English reading. Pause changed to Resume; Resume restored playback; Stop canceled reading and disabled playback controls. Device voices appeared in the selector. The site does not substitute a speech mock or an external audio service.
+- **Navigation:** four section anchors and the Read section menu select the corresponding reading section. Navigation updates its accessible current-section state. Anchor offsets follow the actual size of sticky controls so section headings remain visible below them; controls can be collapsed.
+- **Responsive layout:** inspected at **1280 × 900 desktop**, **768 × 1024 tablet**, and **390 × 844 phone**. No horizontal document overflow. Main paragraph text computed to **21.333 px (16 pt)**. Photographs, controls, and vocabulary cards reflow. All ten displayed image assets loaded: four photographs, the orbit diagram, and five vocabulary illustrations.
+- **Accessibility:** checked semantic headings/landmarks, a skip link, form labels, informative photo descriptions, expanded/controlled translation states, current navigation state, live speech status, visible keyboard focus, reduced-motion CSS, and selectable English/translation text. Vocabulary illustrations are decorative companions to written definitions. Colors use high-contrast text combinations; this was not a formal WCAG certification or a complete assistive-technology audit.
+- **Static delivery:** every local HTML resource/document link resolves; IDs are unique. No external images, fonts, translation APIs, CDN libraries, analytics, or student-data storage are required. The English reading text and PDF link exist directly in HTML for browsers without JavaScript.
+- **Print edition:** exactly **four A4 pages (595.276 × 841.89 pt)**. Main paragraphs are **16 pt**; questions 14 pt; sentence frames/callouts 12.5 pt; vocabulary 11 pt; captions 8.1 pt. Includes four authentic photos, the labeled vector orbit diagram, five illustrated vocabulary entries, five comprehension questions, sentence frames, and linked source credits. All four final pages were rendered and visually inspected. Text is selectable; extraction confirms the key facts. Automated checks found no text outside page bounds. The PDF is not a fully tagged accessible-PDF edition; the semantic HTML reader provides the primary accessible reading experience.
+- **Packaging:** deployment ZIP is tested for archive integrity and contains the static root `index.html`, local assets, PDF, language data, README, credits, and this report. Authoring sources and QA screenshots remain in the working project.
+
+## Instructional review still needed
+
+- Independent native-speaking educator review of translation phrasing and classroom suitability. The checks above do not claim independent translation certification.
+- Listen to the voices on actual school devices for pronunciation and quality; voice availability and offline behavior depend on the browser and OS.
+- Physical A4 print check and a short student classroom trial. No physical printer was available for this verification.
+- After a Netlify upload, verify the final HTTPS URL, access settings, school-network filtering, and Padlet behavior. No live Netlify deployment is claimed in this handoff.
+
+`qa/static-checks.json` retains machine-check results. Rendered PDF pages and responsive screenshots are in `qa/` in the working folder. The Sun reader has not been started.
+
+## Diagram refinement — October 30, 2026
+
+- Replaced the simple land polygon with a globe drawn from projected Natural Earth coastlines, plus a fine geographic grid and restrained edge shading.
+- Rebuilt the ISS silhouette with eight segmented solar wings, a truss, modules, radiators, and a simplified robotic arm.
+- Improved spacing, callout hierarchy, line weights, and label alignment. Forward motion remains tangent at the top of the circular orbit; gravity points toward the shared center of the Earth and orbit.
+- Verified the replacement SVG loads in the reader at desktop and tablet sizes without horizontal overflow. The larger SVG link and descriptive image alternative remain available.
+- Rebuilt the four-page A4 PDF and rechecked the revised page for clipping, overlap, diagram legibility, and 16-point reading text. Refreshed the deployment ZIP and verified its contents and integrity.

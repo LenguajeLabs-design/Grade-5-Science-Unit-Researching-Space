@@ -1,0 +1,21 @@
+# Space Explorer · Grade 5
+
+One reading hub for Mars, Earth’s Moon, the International Space Station, the Sun, and constellations. Each topic includes its existing reader, photographs, language support, read-aloud tools, and illustrated PDF.
+
+## Website
+
+https://lenguajelabs-design.github.io/Grade-5-Science-Unit-Researching-Space/
+
+Topic paths: `mars/`, `moon/`, `iss/`, `sun/`, `constellations/`. All links and assets are relative to support the GitHub Pages project path.
+
+## Hosting
+
+In Settings → Pages select **Deploy from a branch**, **main**, **/ (root)**, then Save. The website is plain HTML, CSS, JavaScript, images, and PDFs; no build step is required. `.nojekyll` disables Jekyll processing.
+
+## Local preview
+
+Run `python3 -m http.server 8765`, then open http://localhost:8765/.
+
+## Credits and reading support
+
+Photo credits and scientific sources appear in each reader and its `SOURCES-AND-IMAGE-CREDITS.md` file. Read-aloud uses browser/device speech services, with voices and offline support varying by device. Language support and translation features vary by reader. No student information is collected by this website.

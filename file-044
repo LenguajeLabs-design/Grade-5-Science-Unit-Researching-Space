@@ -1,0 +1,23 @@
+# Test report — 29 October 2026
+
+## Passed locally
+
+- Official NASA records checked for all three requested IDs, credits and descriptions; original JPEGs downloaded, decoded, resized and included locally. All three loaded and decoded in a browser served from the deployment folder. No external image is required.
+- Desktop (1280 × 900) and tablet-sized (768 × 1024 and 1024 × 768) browser layouts checked; the tablet viewport had no horizontal overflow. Section links navigated. The original four-section visual style and English instructional text were retained.
+- All four summaries appeared for each of Simplified Chinese, Korean, Japanese and German. English remains visible. These are summaries, not full article translations.
+- Read, pause, resume and stop called the expected browser speech functions in a simulated speech-engine test. The PDF button opened the local PDF.
+- PDF is A4, four pages, with selectable text and all three photos. The main paragraphs use 16-point print styling; captions, questions, and vocabulary are smaller. Pages were rendered and visually inspected for overflow.
+- NASA science sources checked against the reader. The text distinguishes evidence of ancient water from confirmed life. A potentially confusing starter diagram was removed; the size comparison is identified as approximate.
+- No Lenguaje Labs or personal branding found in the deployment files.
+
+## Still to verify
+
+- No site has been published to Netlify in this task, so the deployed URL, Padlet link, and deployed image loads have not yet been tested. Follow README.md after uploading.
+- Actual voice sound, voice availability and pause/resume behavior vary by device and browser; the automated check used a simulated speech engine. Test on the school's target iPad or tablet and browser.
+- Translated summaries have not been reviewed by native-speaking educators. A WIDA/EAL classroom review is recommended before rollout.
+- Physical print quality and printer settings have not been tested. Select A4 and enable background graphics if printing the HTML; the supplied PDF already includes backgrounds.
+
+## Home-language update
+
+- Each of the 13 main reading paragraphs now has a Translate button for Simplified Chinese, Korean, Japanese and German. All 52 translations and their reveal/hide controls were checked in a tablet-sized browser; English remained visible and no horizontal overflow or JavaScript errors were observed. Captions, vocabulary and questions are not translated.
+- Translations have not been independently reviewed by native speakers or tested with students. The PDF remains the English print edition.

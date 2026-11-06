@@ -1,0 +1,46 @@
+# ISS reader — sources and image credits
+
+Verified October 30, 2026. All four NASA record pages were opened, their image URLs retrieved, the JPEGs downloaded locally, decoded, and visually matched to the subject and caption. No AI-generated photographs appear in the reader.
+
+## Photographs
+
+| Local JPEG | NASA image ID | Subject / photograph date | Credit | Original NASA record |
+| --- | --- | --- | --- | --- |
+| `assets/images/station.jpg` | iss056e201302 | ISS photographed by Expedition 56 crew from a departing Soyuz, October 4, 2018 | NASA/Roscosmos | [The International Space Station as of Oct. 4, 2018](https://www.nasa.gov/image-article/international-space-station-as-of-oct-4-2018-5/) |
+| `assets/images/floating.jpg` | iss062e004933 | Jessica Meir observing a floating water sphere in Kibo, February 9, 2020 | NASA | [Flight Engineer Jessica Meir observes a floating sphere of water](https://www.nasa.gov/image-article/flight-engineer-jessica-meir-observes-floating-sphere-of-water/) |
+| `assets/images/veggie.jpg` | iss064e047074 | JAXA astronaut Soichi Noguchi displaying Extra Dwarf Pak Choi plants grown for the actual ISS Veggie study, March 26, 2021 | NASA | [JAXA astronaut Soichi Noguchi works on the Veggie experiment](https://www.nasa.gov/image-article/jaxa-astronaut-soichi-noguchi-works-veggie-experiment/) |
+| `assets/images/cupola.jpg` | iss067e033745 | Jessica Watkins viewing Earth through the Cupola, May 2022 | NASA | [Astronaut Jessica Watkins enjoys the view of the Earth below](https://www.nasa.gov/image-article/astronaut-jessica-watkins-enjoys-view-of-earth-below/) |
+
+The local JPEGs retain the bytes downloaded from NASA. NASA's distributed files are 1041 × 694 pixels for the first three photographs, and 1041 × 1562 for the Cupola photograph. The website may crop the hero through CSS; the PDF uses deliberate photo frames. No scientific content has been added to photographs. These historical images are not representations of the station's exact current configuration.
+
+Direct NASA image files:
+
+- [iss056e201302.jpg](https://www.nasa.gov/wp-content/uploads/2023/03/iss056e201302.jpg)
+- [iss062e004933.jpg](https://www.nasa.gov/wp-content/uploads/2023/03/iss062e004933.jpg)
+- [iss064e047074.jpg](https://www.nasa.gov/wp-content/uploads/2023/03/iss064e047074.jpg)
+- [iss067e033745.jpg](https://www.nasa.gov/wp-content/uploads/2023/03/iss067e033745.jpg)
+
+`assets/images/manifest.json` records source and download links, IDs, dates, credits, descriptions, transformations, dimensions, and SHA-256 hashes. Photograph dates are distinct from the NASA webpage publication dates. All four print captions link to the matching NASA record.
+
+## Science references
+
+- [NASA — International Space Station Facts and Figures](https://www.nasa.gov/international-space-station/space-station-facts-and-figures/): approximately 90-minute orbits; about 16 sunrises/sunsets daily; exercise for at least two hours; international agency partnership; continuous occupation since November 2000.
+- [NASA — What Is Microgravity?](https://www.nasa.gov/centers-and-facilities/glenn/what-is-microgravity/): gravity remains strong at ISS altitude; station, crew, and objects fall together; sufficient sideways speed produces continuous free fall around Earth; approximately 28,000 km/h orbital speed.
+- [NASA — Observing Our Planet from Low Earth Orbit](https://www.nasa.gov/missions/station/iss-research/observing-our-planet-from-low-earth-orbit/): approximately 400 km altitude and 90-minute period. Height and period vary; the reader labels them as approximate.
+- [NASA — Why Do Research on the International Space Station?](https://www.nasa.gov/missions/station/iss-research/why-do-research-on-the-international-space-station/): sustained microgravity, exposure to space, Earth observations, and research applications.
+- [NASA — So You Want to Be a Space Farmer…](https://www.nasa.gov/humans-in-space/so-you-want-to-be-a-space-farmer/): growing plants aboard the ISS and learning to support future missions.
+- The specific Veggie image record above confirms that the photographed plants were part of a real ISS investigation, rather than a ground demonstration or a decorative illustration.
+
+## Teaching illustrations and editorial choices
+
+`assets/orbit.svg` is an original schematic based on NASA's microgravity explanation. The ISS symbol is at the top of a circular orbit centered on Earth. The forward-motion arrow is tangent to that path; the gravity arrow points inward toward Earth's center. The dashed curve is the orbit. Distances, spacecraft sizes, and arrow lengths are not to scale. It is labeled as a teaching diagram and distinguished from NASA photographs.
+
+The five vocabulary SVGs are original explanatory drawings, not photographs. Their meanings are also written as selectable text. The print edition draws the same vector illustrations.
+
+The revised globe uses [Natural Earth 1:110m land data](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson), available in the [public domain](https://www.naturalearthdata.com/about/terms-of-use/). Its coastlines are drawn with an orthographic projection centered on 20° W, 12° N. The source GeoJSON and generated projection paths are retained in `tools/data/`. D3 Geo is used only for authoring the retained paths; the deployed diagram is a self-contained SVG. The ISS silhouette is a simplified teaching illustration, not an engineering configuration drawing.
+
+The supplied manuscript is retained as `MANUSCRIPT.md` in the working folder. Its four-section narrative is the editorial source. Short paragraphs were combined for coherent translation blocks; the print text was edited for layout. The fixed statement about continuous occupation since November 2000 avoids a time-dependent anniversary count. Everyday care and exercise details are retained in the reading and supporting boxes.
+
+The European Space Agency represents multiple European countries; Europe is not described as a single country. Microgravity is not explained as the absence of Earth's gravity. Approximate orbital figures are not presented as an exact daily flight schedule.
+
+NASA and other credited agencies do not endorse this independently prepared educational reader.

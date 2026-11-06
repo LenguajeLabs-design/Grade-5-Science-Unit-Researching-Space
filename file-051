@@ -1,0 +1,24 @@
+# Moon reader test report
+
+Checked 29 October 2026. Browser checks used the local HTTP preview of this deployment folder.
+
+## Passed
+
+- Authentic media: NASA records checked for the near-side LRO mosaic, Tycho central-peak mosaic, Buzz Aldrin Apollo 11 photo and the official eight-phase diagram. Downloads were decoded and inspected. Three photographs/mosaics are in the illustrated PDF; all four NASA assets are in the website.
+- Local assets: every HTML image, script, stylesheet and local document link resolves. No external image, font, translation API, CDN library or analytics resource is required. All five displayed image assets, including the supplied phase SVG, loaded in the browser after opening the optional diagram.
+- Science: checked distance, relative size, orbit, phases, reflected sunlight, tidal locking, surface history, polar ice and Apollo against NASA sources. Regular phases are distinguished from lunar eclipses. Dry terrain is not described as proof that water is absent.
+- Translations: all 12 main reading paragraphs opened and closed in each of the four languages (48 blocks). Text remains selectable and English remains visible. Language changes reset translations; section changes do not close an open translation. Translation arrays match the language-review JSON file.
+- Summaries and navigation: four section summaries per language; navigation and explicit Read section selection align with the selected passage. Translation buttons have accessible expanded state and target IDs. HTML IDs are unique.
+- Read-aloud: the actual desktop browser/device speech engine emitted its start event for the selected English section. Pause, resume and stop produced the expected UI states. Device voices appeared in the voice selector and changed with language. Tests did not replace the speech engine with a mock.
+- Layout: desktop and tablet-sized views were inspected. At 768px width the page had no horizontal overflow. Reading controls remain available while scrolling.
+- PDF: four A4 pages; 16-point main paragraphs, embedded photographs, captions, linked NASA credits, five vocabulary words, comprehension questions and sentence frames. Text extraction verified key facts. Every page was rendered and visually inspected with no clipping or overlapping text. Fonts are embedded in the supplied PDF. The Open PDF link launched its local browser viewer.
+- Branding: no personal branding appears in the reader.
+
+## Limits and remaining checks
+
+- Translations have not had independent native-speaking educator review or classroom testing. WIDA suitability reflects the intended scaffolded design, not a formal proficiency certification.
+- Voice quality, pronunciation and offline voice availability need listening checks on the actual school devices. OS speech support varies. The static reader works from local assets; speech offline requires a locally installed voice.
+- No physical printer test. The supplied PDF is the controlled four-page print edition; browser Print can vary with browser settings and paper margins.
+- Deployment and student access must be checked after Netlify upload and the final access setting. Padlet embedding or school-network filtering has not been tested.
+
+See SOURCES-AND-IMAGE-CREDITS.md and assets/images/manifest.json for source evidence and exact files.

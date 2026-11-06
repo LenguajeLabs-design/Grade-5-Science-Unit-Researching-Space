@@ -1,0 +1,61 @@
+# Sources and image credits
+
+Space Explorer · Grade 5 · Issue 05 · Constellations. Records checked 2 November 2026.
+
+## Editorial source
+
+The approved revised `source/CONSTELLATIONS_MANUSCRIPT.md` is the English source of truth. `source/content.json` retains all four sections, 36 main paragraphs, seven callouts, five vocabulary meanings, five questions and five partner frames. Both HTML and PDF are generated from it. The original brief is retained in `source/CODEX_BRIEF.md` as production context. No manuscript science claims were replaced. Supplementary diagram captions explain approximations.
+
+## Photographs and source diagram
+
+### Orion: authentic ground-based photograph
+
+- Local file: `assets/images/orion.jpg` (1598 × 2000).
+- Record: [Orion Constellation (ground-based image), ESA/Hubble, opo0205b](https://esahubble.org/images/opo0205b/), released 6 March 2002.
+- Download: [Large JPEG](https://cdn.esahubble.org/archives/images/large/opo0205b.jpg).
+- Full credit: **Akira Fujii**.
+- Rights: [ESA/Hubble usage policy](https://esahubble.org/copyright/) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The record has no separate restriction; the policy permits credited reuse and adaptations.
+- The downloaded JPEG is unchanged, including its original photographer credit. No crop, color change, retouching, generated stars or AI editing. Browser sizing preserves the full image aspect ratio.
+- The separate `assets/orion-overlay.svg` is an optional educational adaptation. It draws only the torso/Belt/leg pattern through seven identified stars. These are imagined connections, not physical connections or official constellation boundaries. The same geometry is drawn over the print photograph.
+- Coordinates in `assets/orion-coordinates.json` refer to the full JPEG. Brightness-weighted centers were measured after identifying Betelgeuse, Bellatrix, Mintaka, Alnilam, Alnitak, Saiph and Rigel. Pattern cross-check: [ESO/IAU/Sky & Telescope Orion chart](https://www.eso.org/public/images/eso1321b/). That chart is a reference, not a photograph used in the issue.
+
+### Star trails: authentic long-exposure photograph
+
+- Local file: `assets/images/star-trails.jpg` (1200 × 1800).
+- Record: [Star trails above Paranal, ESO](https://www.eso.org/public/images/2019-07-05-Prnl-DistStartrails-fromArmazones-CC/).
+- Download: [Large JPEG](https://cdn.eso.org/images/large/2019-07-05-Prnl-DistStartrails-fromArmazones-CC.jpg).
+- Full credit: **P. Horálek/ESO**, with the photographer link retained: [P. Horálek](https://www.facebook.com/PetrHoralekPhotography/).
+- Rights: [ESO usage policy](https://www.eso.org/public/outreach/copyright/), CC BY 4.0. The record has no separate restriction.
+- Alteration: resized from 3648 × 5472 and JPEG recompressed at quality 88. Full framing retained. No generated imagery or AI editing. Trails record apparent stellar motion; straight yellow beams are observatory lasers and are identified in the caption.
+
+### NASA pointer-star reference: scientific diagram, not a photograph
+
+- Local original: `assets/images/polaris-nasa.jpg` (1920 × 1080).
+- Record: [What is the North Star and How Do You Find It?, NASA](https://science.nasa.gov/solar-system/what-is-the-north-star-and-how-do-you-find-it/), Preston Dyches, 28 July 2021.
+- Download: [NASA/JPL-Caltech original diagram](https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/internal_resources/5050/North-star_location-1.jpg?w=1920&h=1080&fit=clip).
+- Credit: **NASA/JPL-Caltech**. Use follows [NASA Images and Media Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/); no agency endorsement is implied.
+- `assets/polaris.svg` is an educational redraw of the original's relative star positions, with a common affine scale and additional high-contrast labels. Merak → Dubhe → Polaris is the pointer direction. Original image coordinates are recorded in `assets/polaris-coordinates.json`.
+- Big Dipper is labeled an asterism within Ursa Major; Polaris belongs to Ursa Minor. The chart is one orientation, not a prediction of a specific place or time. It is most useful from the Northern Hemisphere. Lines are guides, not star distances.
+
+## Original scientific illustrations
+
+- `assets/perspective.svg`: original conceptual projection. A front view shows a row; a view from above shows different depths and viewing rays. A, B and C are illustrative stars, **not actual Orion coordinates**. Not to scale. Concept checked against [NASA/STScI, The True Shape of Orion](https://science.nasa.gov/asset/hubble/the-true-shape-of-orion/), visualization credit F. Summers (STScI). No frame from that video is presented as photography.
+- `assets/earth-motion.svg`: original schematics contrasting daily axial rotation with yearly orbit around the Sun. At opposite orbital positions the night sides face opposite directions. Not to scale; axial tilt is deliberately omitted. The diagrams explain mechanisms, not season dates or exact viewing directions.
+- Vocabulary diagrams and favicon are original vector artwork. There are no AI-generated photographs, invented observatory credits, remote fonts or third-party scripts.
+
+## Science references and approximation notes
+
+1. [IAU, The Constellations](https://www.iau.org/IAU/Astronomy-FAQs/Constellations.aspx): 88 official sky regions. [IAU archive](https://iauarchive.eso.org/public/themes/constellations/) is an alternate authoritative record. Patterns and officially bounded regions are distinguished in the manuscript and vocabulary.
+2. [NASA Space Place, What Are Constellations?](https://spaceplace.nasa.gov/constellations/en/): location, seasons, sky patterns and changing views as Earth rotates and orbits.
+3. [NASA/STScI, The True Shape of Orion](https://science.nasa.gov/asset/hubble/the-true-shape-of-orion/): perspective and three-dimensional stellar distribution.
+4. [Science Foundation Ireland, Seeing Stars!](https://www.sfi.ie/site-files/primary-science/media/flash/act32/download/dpsm_class_activity_the_plough.pdf), follow-up Orion model: Alnitak 800, Alnilam 1360, Mintaka 900 light-years. This supports the manuscript's broad classroom estimates of approximately 800, 1,300 and 900. These are approximate historical educational values; 1,360 rounds to 1,400 at the nearest hundred, so 1,300 must not be described as exact nearest-hundred rounding. We preserve the approved broad approximation and label the numerical support accordingly. Modern distance estimates vary; no precise 3D model is inferred from these numbers.
+5. [NASA, North Star guide](https://science.nasa.gov/solar-system/what-is-the-north-star-and-how-do-you-find-it/): pointer method, nearly fixed Polaris and Northern Hemisphere context.
+6. [Hong Kong Space Museum, The Big Dipper – A Pointer in the Sky](https://hk.space.museum/en/web/spm/resources/curators-blog/2022/03/the-big-dipper-a-pointer-in-the-sky.html): seven named stars and Chinese seasonal traditions. [Chinese University of Hong Kong astronomy notes](https://www.phy.cuhk.edu.hk/astroworld/note.pdf) identify 北斗七星 within Ursa Major. The English term “Northern Dipper” is the translation of 北斗 (Běidǒu); it describes this tradition without claiming all Chinese sky divisions match IAU constellations.
+
+## Language supports
+
+Simplified Chinese, Korean, Japanese and German paragraph translations and section summaries were prepared for this issue. They are learning supports, not substitutes for the approved English. The UI flags them as drafts for teacher review. They have been checked for completeness, paragraph correspondence and key science distinctions; a native-speaking educator has not independently certified them.
+
+## Offline use
+
+All photos, diagrams, article text, language supports and PDF are local. Source links require internet. Browser speech is device-provided; only installed local voices may work offline. No analytics or student information is collected.

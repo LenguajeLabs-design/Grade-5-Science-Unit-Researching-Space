@@ -1,0 +1,70 @@
+[
+  {
+    "file": "assets/images/moon-nearside.jpg",
+    "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/l/lro_nearside.jpg",
+    "verified_date": "2026-10-29",
+    "original_dimensions": [
+      1936,
+      1881
+    ],
+    "optimized_dimensions": [
+      1600,
+      1555
+    ],
+    "original_sha256": "066e34b274e01acd248118c7c0ef6def95959d7358e94f3e5d6e9cf181e0cfc9",
+    "optimized_sha256": "21fb16af545127f2cc5a4915dda34dfd1c6d2a20966ece74c09312e3265ece90",
+    "optimized_bytes": 350533,
+    "processing": "Proportional resize, JPEG quality 90, optimize=True; no content generation or retouching"
+  },
+  {
+    "file": "assets/images/moon-tycho.jpg",
+    "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/5/565736main_M162350671LE_full-1.jpg",
+    "verified_date": "2026-10-29",
+    "original_dimensions": [
+      2147,
+      986
+    ],
+    "optimized_dimensions": [
+      1800,
+      827
+    ],
+    "original_sha256": "74f7c86421ebe6f1525898d3bc4b3aebdeb60309e56a7e22e5b9541b4c51b62a",
+    "optimized_sha256": "37d4a7163e61d108a61616c23107b8910c3ce239294319ae2cef47b4e08f5f00",
+    "optimized_bytes": 494394,
+    "processing": "Proportional resize, JPEG quality 90, optimize=True; no content generation or retouching"
+  },
+  {
+    "file": "assets/images/moon-apollo.jpg",
+    "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/lunar-science/2023/09/6900952_orig.jpg",
+    "verified_date": "2026-10-29",
+    "original_dimensions": [
+      2739,
+      3000
+    ],
+    "optimized_dimensions": [
+      1461,
+      1600
+    ],
+    "original_sha256": "6672f594b311b2466d4986796b8dd3a8ebaaddfabddde580059b8ed2c82bc9b8",
+    "optimized_sha256": "8da38c834f43e94fb046040791f046aade7ca0742137e69f8baf70da296bb1a5",
+    "optimized_bytes": 764411,
+    "processing": "Proportional resize, JPEG quality 90, optimize=True; no content generation or retouching"
+  },
+  {
+    "file": "assets/images/moon-phases.jpg",
+    "download_url": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/moon_phases.png",
+    "verified_date": "2026-10-29",
+    "original_dimensions": [
+      3728,
+      3728
+    ],
+    "optimized_dimensions": [
+      1800,
+      1800
+    ],
+    "original_sha256": "fc45591bbff1dc3013194fd3aa878085c7e9b886b772442eb5eda6896f9b2188",
+    "optimized_sha256": "2ff1e58a74ac7d2917861ce53f032dee196766a1443d1a087716670f1028e590",
+    "optimized_bytes": 238035,
+    "processing": "Proportional resize, JPEG quality 90, optimize=True; no content generation or retouching"
+  }
+]

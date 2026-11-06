@@ -1,0 +1,68 @@
+# Constellations · Issue 05 · Test report
+
+Review date: 2 November 2026 (Asia/Shanghai). Educational review edition. Local build and browser tests completed; deployment to a Netlify account is not claimed.
+
+## Source integrity
+
+- Approved revised manuscript read before production. The handoff ZIP contained the manuscript and brief, with no image bundle or application source.
+- Four sections in the approved sequence; all 36 main paragraphs retained in English, all seven callouts retained, all five meanings, questions and partner frames retained. No science claim in the manuscript was replaced.
+- Website and print content share `source/content.json`. Static checks compare rendered English paragraphs with that source and confirm the source paragraphs occur in the approved manuscript.
+- Local Mars and Moon readers were inspected for series styling, language and audio behavior. Their published URLs could not be fetched by the web research tool; no live comparison is claimed.
+
+## Orion interactive photograph
+
+Authentic image: Akira Fujii / ESA/Hubble opo0205b, 1598 × 2000, locally stored, full framing preserved. The default HTML and every fresh page load show no overlay. No saved toggle preference changes that default.
+
+Seven identified star centers are recorded in `assets/orion-coordinates.json`. Their brightness-weighted coordinates were measured in the actual photograph and visually checked against the ESO/IAU/Sky & Telescope Orion chart. No invented positions or unrelated stars were used. The annotation follows the torso/Belt/leg pattern only; Orion's other stars are deliberately not traced. The lines are described as educational, imaginary connections.
+
+Browser checks in the Codex in-app browser on this Mac:
+
+| Viewport | Outcome |
+| --- | --- |
+| Desktop 1440 × 1000 | Photograph, rings, connecting lines and labels visually aligned. |
+| Tablet portrait 768 × 1024 | Alignment retained; photo and overlay both 302.398 × 378.469 CSS px at the same origin. |
+| Tablet landscape 1024 × 768 | Alignment retained; photo and overlay both 417.523 × 522.555 CSS px at the same origin. Toggle off/on leaves photo dimensions and origin unchanged. |
+| Phone 390 × 844 | Single-column layout; photo and overlay both 331 × 414.266 CSS px at the same origin. Toggle touch target about 46.8px high. |
+
+No horizontal document overflow in these checks. A shared intrinsic image ratio and SVG viewBox maintain the mapping. Screenshot evidence is retained in the workspace `qa/` folder.
+
+Mouse click, Space and Enter toggle the native button. Visible label switches Show/Hide constellation lines; `aria-pressed` changes false/true; off hides only the SVG layer. Description changes with the state. Rings, lines, star labels and text descriptions avoid relying only on color. The SVG is decorative to assistive technology; the photograph has meaningful alternative text and the state description is live.
+
+## Language supports
+
+- English is always visible and selectable. Changing languages does not replace it.
+- 36 paragraph translations per language (144 total), four section summaries per language (16 total). Data shape, nonempty entries and JSON/JavaScript parity checked.
+- All four language selectors tested across all four sections. First and last paragraph reveals exercised in each section/language; closing one reveal leaves the other open. Changing language resets old reveals. Summary, paragraph language tags and button states update correctly.
+- The in-app Mac browser listed five Simplified Chinese matching voices, one Korean, three Japanese and eleven German voices during the checks. Availability may differ by device and installation.
+- Translations were reviewed for correspondence and the core science distinctions (distance versus time, rotation versus orbit, regions versus patterns). Native-speaking educator proofreading remains outstanding and is flagged in the UI.
+
+## Read-aloud
+
+- Actual browser speech-synthesis controls exercised for English and all four home languages. English starts reading the selected heading/article/callouts; home languages start the corresponding short summary.
+- Read changes the control state; Pause changes to Resume; resume returns to playback; Stop cancels and resets controls. Section/language/voice changes cancel the preceding session. Native voice selection is restricted to matching language families.
+- Read, pause, resume and stop were checked in the Mac in-app browser with installed voices. Device-specific sound quality, pronunciation, Bluetooth output, school audio policies and iPad/Chromebook speech behavior have not been certified.
+- No matching voice and absent speech API have visible fallback messages. Speech is not prerecorded and no audio is hosted. Offline voice availability depends on locally installed voices.
+
+## Science and imagery
+
+- IAU 88 official sky regions confirmed; common star figures and official regions distinguished.
+- NASA educational explanations checked for perspective, daily rotation and yearly orbit, Northern Hemisphere season/location differences and Polaris navigation.
+- Big Dipper labeled an asterism within Ursa Major. Polaris labeled in Ursa Minor. Pointer path is Merak → Dubhe → Polaris; relative geometry redrawn from NASA/JPL-Caltech's original chart, not invented. Chart orientation is explicitly an example, not a horizon prediction.
+- Northern Dipper/北斗 is treated as the traditional Chinese name rather than a direct equivalence between Chinese sky systems and IAU regions; Hong Kong Space Museum and CUHK materials checked.
+- Approved Belt distances retained as **broad approximate classroom values**: Alnitak ~800, Alnilam ~1,300, Mintaka ~900 light-years. The SFI education table gives 800/1360/900. Because 1360 rounds to 1400 at the nearest hundred, the issue does not claim the approved 1300 is exact nearest-hundred rounding. Published estimates differ. No scale-accurate 3D Orion geometry is fabricated from these estimates; the perspective illustration uses explicitly illustrative A/B/C stars.
+- Verified photo records, full credits, usage policies, originals and alterations documented. Orion JPEG unchanged; trail photograph resized/recompressed without crop; source images and vectors are local. No generated raster imagery is used.
+- Straight observatory lasers in the trail photograph are identified so they are not mistaken for stellar paths. Schematics are labeled, not to scale, with axial tilt omitted.
+
+## PDF, print and static publishing
+
+- Exactly four A4 pages (595.276 × 841.890 points); all main article paragraphs at 16pt. Smaller captions and support panels are intentional. Text remains selectable, not flattened into page images.
+- Rendered and visually inspected all four pages. Column flow, illustration placement, captions, page numbers and bottom support panels checked. Main text was not shortened or auto-shrunk to fit.
+- Static annotated Orion image with an explanation replaces the web toggle in print. Photographs and vector diagrams are embedded. All five vocabulary meanings, all five scientist questions and all five partner frames are included across the four pages.
+- Browser print CSS offers a readable fallback; only the supplied PDF is the designed four-page edition. The PDF is not a tagged/PDF-UA-certified document.
+- Static HTML/JS syntax, duplicate ids, local links, image decodability, alternative text, translation targets, PDF text completeness and key color contrast checked by `tools/verify.py` plus browser checks.
+- No external JavaScript, fonts, runtime API or CDN is required. Local assets and language data load from relative URLs; source links alone require internet. Direct file use requires no fetch calls. A direct `file://` browser navigation was blocked by the preview browser's URL policy, so direct-file execution is code-reviewed rather than browser-verified; HTTP preview was used for interaction tests. No analytics or student-data collection.
+- Netlify folder has top-level `index.html`, assets, PDF and `netlify.toml`; no build command, GitHub repository or personal branding. Complete ZIP is checked for integrity and matching contents after packaging.
+
+## Remaining real-world review
+
+Native-speaking educator review, VoiceOver/NVDA end-to-end review, physical school tablet/touch and classroom audio checks, and the final hosted Netlify/Padlet link check remain. These require the school's devices/accounts or human language review and are not represented as completed. Browser viewport emulation is not a physical-device test. The reader is ready for educational review and Netlify Drop.

@@ -1,0 +1,109 @@
+'use strict';
+(() => {
+ const $ = s => document.querySelector(s);
+ const language = $('#language'), sectionSelect = $('#section-select'), voiceSelect = $('#voice');
+ const status = $('#speech-status'), read = $('#read'), pause = $('#pause'), stop = $('#stop');
+ const sections = [...document.querySelectorAll('.chapter')];
+ let current = 0, voices = [], generation = 0, active = false, paused = false;
+ const synth = window.speechSynthesis;
+ const langNames = {'zh-CN':'简体中文','ko-KR':'한국어','ja-JP':'日本語','de-DE':'Deutsch'};
+ function showSummary() {
+  const support = language.value !== 'en';
+  $('#summary').hidden = !support;
+  $('#summary-number').textContent = String(current + 1);
+  $('#summary-text').lang = language.value;
+  $('#summary-text').textContent = support ? window.TRANSLATIONS[language.value].summaries[current] : '';
+ }
+ function resetSpeech(message) {
+  generation++;
+  if (synth) synth.cancel();
+  active = false; paused = false;
+  pause.disabled = true; stop.disabled = true; read.disabled = !synth;
+  pause.textContent = 'Pause'; sections.forEach(s => s.classList.remove('reading-active'));
+  if (message) status.textContent = message;
+ }
+ function selectSection(n, cancel = true) {
+  if (n === current) return;
+  if (cancel) resetSpeech('Section changed. Press Read section to begin.');
+  current = n; sectionSelect.value = String(n); showSummary();
+  document.querySelectorAll('.chapters a').forEach(a => {
+   if (a.hash === '#p' + (n + 1)) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current');
+  });
+ }
+ function setVoices() {
+  voices = synth ? synth.getVoices() : [];
+  const lang = language.value.toLowerCase(), saved = voiceSelect.value;
+  const candidates = voices.filter(v => v.lang.toLowerCase().split('-')[0] === lang.split('-')[0]).sort((a,b) => Number(b.lang.toLowerCase() === lang) - Number(a.lang.toLowerCase() === lang));
+  voiceSelect.replaceChildren(new Option(candidates.length ? 'Device default (matching language)' : 'No matching voice installed', ''));
+  candidates.forEach(v => voiceSelect.add(new Option(v.name + ' · ' + v.lang, v.voiceURI)));
+  if (candidates.some(v => v.voiceURI === saved)) voiceSelect.value = saved;
+  read.disabled = !synth || active;
+  if (!active) status.textContent = !synth ? 'Read-aloud is unavailable in this browser. You can still read all text and use language supports.' : !candidates.length ? 'No matching voice is listed yet. Install a voice for this language or try another browser. Reading may be unavailable.' : 'Ready. English reads the section; a home language reads its short summary.';
+ }
+ language.addEventListener('change', () => {
+  resetSpeech();
+  document.querySelectorAll('[data-translate]').forEach(button => {
+   button.hidden = language.value === 'en'; button.setAttribute('aria-expanded','false');
+   button.textContent = 'Translate this paragraph' + (langNames[language.value] ? ' · ' + langNames[language.value] : '');
+   const p = document.getElementById(button.getAttribute('aria-controls')); p.hidden = true; p.textContent = ''; p.lang = language.value;
+  });
+  showSummary(); setVoices();
+ });
+ document.querySelectorAll('[data-translate]').forEach(button => button.addEventListener('click', () => {
+  const [s,p] = button.dataset.translate.split('-').map(Number);
+  const target = document.getElementById(button.getAttribute('aria-controls'));
+  const opening = button.getAttribute('aria-expanded') !== 'true';
+  target.textContent = window.TRANSLATIONS[language.value].paragraphs[s][p]; target.lang = language.value; target.hidden = !opening;
+  button.setAttribute('aria-expanded', String(opening));
+  button.textContent = (opening ? 'Hide translation' : 'Translate this paragraph') + ' · ' + langNames[language.value];
+ }));
+ const toggle = $('#toggle-lines'); toggle.hidden = false;
+ toggle.addEventListener('click', () => {
+  const on = toggle.getAttribute('aria-pressed') !== 'true';
+  toggle.setAttribute('aria-pressed',String(on)); toggle.textContent = on ? 'Hide constellation lines' : 'Show constellation lines';
+  $('#orion-lines').hidden = !on;
+  $('#line-description').textContent = on ? 'Educational annotations reveal Orion’s shoulders and legs around the three Belt stars: Alnitak, Alnilam and Mintaka. The lines are imagined; the stars are not physically connected.' : 'Original photograph. Look for the three bright Belt stars near the middle.';
+ });
+ sectionSelect.addEventListener('change', () => selectSection(Number(sectionSelect.value)));
+ sections.forEach((s,i) => {
+  s.addEventListener('pointerdown', () => selectSection(i));
+  s.addEventListener('focusin', () => selectSection(i));
+ });
+ function fromHash() { const match = location.hash.match(/^#p([1-4])$/); if (match) selectSection(Number(match[1])-1); }
+ window.addEventListener('hashchange',fromHash); fromHash();
+ read.addEventListener('click', () => {
+  if (!synth) return;
+  resetSpeech(); const token = generation;
+  const selected = voices.find(v => v.voiceURI === voiceSelect.value) || voices.find(v => v.lang.toLowerCase() === language.value.toLowerCase()) || voices.find(v => v.lang.toLowerCase().split('-')[0] === language.value.toLowerCase().split('-')[0]);
+  if (!selected && voices.length) {status.textContent = 'No matching voice is available. Choose another language or install a voice on this device.'; return;}
+  let chunks;
+  if (language.value === 'en') {
+   chunks = [sections[current].querySelector('h2').textContent, sections[current].querySelector('.question-heading').textContent, ...[...sections[current].querySelectorAll('.readpara,.callout')].map(p => p.textContent)];
+  } else chunks = [window.TRANSLATIONS[language.value].summaries[current]];
+  active = true; pause.disabled = false; stop.disabled = false; read.disabled = true;
+  sections[current].classList.add('reading-active');
+  status.textContent = 'Reading section ' + (current+1) + (language.value === 'en' ? ' in English.' : ' home-language summary.');
+  let index = 0;
+  function next() {
+   if (token !== generation) return;
+   if (index >= chunks.length) { resetSpeech('Finished reading section ' + (current+1) + '.'); return; }
+   const utterance = new SpeechSynthesisUtterance(chunks[index++]); utterance.lang = language.value; utterance.rate = .88;
+   if (selected) utterance.voice = selected;
+   utterance.onend = next;
+   utterance.onerror = event => { if (token === generation) resetSpeech('Read-aloud could not continue (' + event.error + '). Check the device voice and audio settings.'); };
+   synth.speak(utterance);
+  }
+  next();
+ });
+ pause.addEventListener('click', () => {
+  if (!active || !synth) return;
+  paused = !paused; if (paused) synth.pause(); else synth.resume();
+  pause.textContent = paused ? 'Resume' : 'Pause'; status.textContent = paused ? 'Reading paused.' : 'Reading resumed.';
+ });
+ stop.addEventListener('click', () => resetSpeech('Reading stopped.'));
+ voiceSelect.addEventListener('change', () => resetSpeech('Voice changed. Press Read section to begin.'));
+ window.addEventListener('pagehide', () => resetSpeech());
+ if (synth) synth.addEventListener('voiceschanged', setVoices);
+ showSummary(); setVoices();
+ document.querySelectorAll('.chapters a').forEach(a => { if (a.hash === '#p' + (current + 1)) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); });
+})();

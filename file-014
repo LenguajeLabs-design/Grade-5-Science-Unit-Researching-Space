@@ -1,0 +1,42 @@
+{
+  "source": "NASA/JPL-Caltech North-star_location-1.jpg",
+  "sourceSize": [
+    1920,
+    1080
+  ],
+  "starsInSourcePixels": {
+    "Merak": [
+      970,
+      216
+    ],
+    "Dubhe": [
+      933,
+      290
+    ],
+    "Megrez": [
+      1089,
+      312
+    ],
+    "Phecda": [
+      1085,
+      245
+    ],
+    "Alioth": [
+      1158,
+      362
+    ],
+    "Mizar": [
+      1212,
+      403
+    ],
+    "Alkaid": [
+      1313,
+      404
+    ],
+    "Polaris": [
+      704,
+      677
+    ]
+  },
+  "note": "Redrawn using common affine scale from source image; diagram orientation is one example, not a horizon prediction."
+}

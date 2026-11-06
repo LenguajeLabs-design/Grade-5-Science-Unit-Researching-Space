@@ -1,0 +1,41 @@
+# Earth's Moon: sources and image credits
+
+Verified 29 October 2026. Issue 02 in the Space Explorer Grade 5 series. English text is adapted from the supplied Moon prototype and checked against the NASA sources below. Translations are comprehension supports; they have not been independently reviewed by native-speaking educators.
+
+## Authentic NASA imagery
+
+All displayed media are local. No image requires a live connection to NASA. The original JPEGs and PNG were downloaded from NASA's asset host, decoded and inspected, then resized proportionally. No generated content was added and no scientific features were retouched. File sizes, dimensions and SHA-256 checksums are recorded in `assets/images/manifest.json`.
+
+| Local file | Official NASA record | Credit and context |
+| --- | --- | --- |
+| `assets/images/moon-nearside.jpg` | [Lunar Near Side](https://science.nasa.gov/resource/lunar-near-side/) | NASA/Goddard Space Flight Center/Arizona State University. Mosaic based on cameras aboard Lunar Reconnaissance Orbiter; not a single Earth-based photograph. The record was published June 17, 2019. |
+| `assets/images/moon-tycho.jpg` | [Tycho Crater's Central Peak on the Moon](https://science.nasa.gov/resource/tycho-craters-central-peak-on-the-moon/) | NASA Goddard/Arizona State University. LRO camera mosaic of the central mountains, June 10, 2011; original asset includes identifier M162350671LE. The photo shows the central peak complex, not the entire crater. |
+| `assets/images/moon-apollo.jpg` | [Moonwalker Edwin “Buzz” Aldrin](https://science.nasa.gov/resource/saturn-apollo-program-2/) | NASA/MSFC. Buzz Aldrin on the lunar surface during Apollo 11 in 1969; Neil Armstrong took the photograph. Armstrong is reflected in the visor. |
+| `assets/images/moon-phases.jpg` | [Phases of the Moon](https://science.nasa.gov/resource/phases-of-the-moon-2/) | NASA/Bill Dunford. An official explanatory diagram, not a photograph of an arrangement in space. Inner ring: orbital positions; outer ring: views from Earth. Not to scale. Optional expanded diagram in section 3. |
+
+### Original download URLs
+
+- Near side: https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/l/lro_nearside.jpg
+- Tycho: https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/5/565736main_M162350671LE_full-1.jpg
+- Apollo: https://assets.science.nasa.gov/content/dam/science/psd/lunar-science/2023/09/6900952_orig.jpg
+- Phases: https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/m/moon_phases.png
+
+`assets/moon-phases.svg` is the supplied prototype's schematic illustration of four phase views, checked against NASA's phase descriptions. It is explicitly labeled as a diagram in the website and PDF. Right-lit first quarter and left-lit third quarter represent a Northern Hemisphere view. The dark new Moon is a schematic marker; it is usually not visible in the sky. The PDF redraws the same four shapes as vectors. This is the only original scientific illustration retained; the illustrated Moon cover has been replaced with NASA imagery.
+
+### Reuse
+
+Use follows [NASA Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/): NASA content is generally not subject to US copyright and can be used for educational and informational purposes under the stated conditions. Credits are preserved and no NASA endorsement is claimed. Protected identifiers and separately copyrighted third-party material have additional rules. This manifest records source and use information rather than assigning a blanket license to all NASA materials.
+
+## Science verification
+
+| Reader claim | Supporting primary source |
+| --- | --- |
+| Earth's natural satellite; relative size; rocky surface; thin exosphere; exploration | [NASA Moon Facts](https://science.nasa.gov/moon/facts/) |
+| Average distance 384,400 km; orbit about 27.3 days | [NASA Basics of Space Flight, Chapter 1](https://science.nasa.gov/learn/basics-of-space-flight/chapter1-2/) |
+| Reflected sunlight; phase cycle about 29.5 days; visible lit fraction changes | [NASA Moon Phases](https://science.nasa.gov/moon/moon-phases/) |
+| Rotation matches the orbit; far side also receives sunlight | [NASA Tidal Locking](https://science.nasa.gov/moon/tidal-locking/) and [Top Moon Questions](https://science.nasa.gov/moon/top-moon-questions/) |
+| Impacts, long-lived craters, mountains, ancient lava plains | [NASA Moon Craters](https://science.nasa.gov/moon/lunar-craters/) and the Tycho record above |
+| Ice in permanently shadowed polar regions; no rivers or oceans of liquid water | [NASA Moon Water and Ices](https://science.nasa.gov/moon/moon-water-and-ices/) and Moon Facts |
+| Apollo 11 astronauts, photography and sampling | Apollo image record above and [NASA Moon Facts](https://science.nasa.gov/moon/facts/) |
+
+The 27.3-day orbital period and 29.5-day phase cycle refer to different motions. The Moon must travel a little farther to return to the same phase because Earth and Moon are also moving around the Sun. Regular phases are not Earth's shadow; a lunar eclipse is a separate event. “Nearly the same side” allows for the Moon's small apparent wobble (libration).
